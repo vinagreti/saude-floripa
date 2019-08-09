@@ -1,0 +1,23 @@
+<mat-toolbar color="accent">
+  <a [routerLink]="[titleLink]" routerLinkActive=""><h1> {{ 'app.title' | translate }} </h1></a>
+
+  <span class="center-space"></span>
+
+  <span *ngIf="(language$ | async) as language" >
+    <ng-container *ngIf="i18nLocales.length > 1">
+      <mat-menu #appMenu="matMenu">
+        <ng-container *ngFor="let i18nLocale of i18nLocales">
+          <button mat-menu-item *ngIf="language !== i18nLocale" (click)="setLanguage(i18nLocale)">{{i18nLocale}}</button>
+        </ng-container>
+      </mat-menu>
+      <button mat-flat-button [matMenuTriggerFor]="appMenu">{{language}}</button>
+    </ng-container>
+  </span>
+
+  &nbsp;
+
+  <span>
+    <ng-content></ng-content>
+  </span>
+
+</mat-toolbar>

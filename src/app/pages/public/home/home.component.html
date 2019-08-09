@@ -1,0 +1,12 @@
+<h1>{{ 'app.title' | translate }}</h1>
+
+<p>SERVICE {{ today | date: 'short' : '' : (language$ | async)}}</p>
+<p>BROWSER: {{ today | date: 'short' }}</p>
+<p>EN: {{ today | date: 'short' : '' : 'en'}}</p>
+<p>ES: {{ today | date: 'short' : '' : 'es'}}</p>
+<p>PT: {{ today | date: 'short' : '' : 'pt'}}</p>
+<p>currencyy: {{ 10000000 | currency }}</p>
+
+<a [routerLink]="['/home']">Home</a>
+<br>
+<a [routerLink]="['/home2']">Home 2</a>

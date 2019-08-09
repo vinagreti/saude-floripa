@@ -1,0 +1,11 @@
+<app-navbar titleLink="/dashboard">
+  <button mat-flat-button [matMenuTriggerFor]="appWarpperPrivateMenu" class="menu-icon">&#9776;</button>
+  <mat-menu #appWarpperPrivateMenu="matMenu">
+    <button mat-menu-item routerLink="/dashboard">{{ 'label.Dashboard' | translate }}</button>
+    <button mat-menu-item color="warn" (click)="logout()">{{ 'label.Logout' | translate }}</button>
+  </mat-menu>
+</app-navbar>
+
+<app-warpper-content>
+  <router-outlet></router-outlet>
+</app-warpper-content>

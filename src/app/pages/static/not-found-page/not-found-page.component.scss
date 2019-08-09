@@ -1,0 +1,15 @@
+@import '@styles/colors';
+
+.not-found-page-wrapper {
+  text-align: center;
+  padding: 80px 8px;
+
+  h1, .not-found-page-icon {
+    color: $app-color-warn;
+  }
+
+  .not-found-page-icon {
+    font-size: 64px;
+  }
+}
+

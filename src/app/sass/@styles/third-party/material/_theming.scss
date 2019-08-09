@@ -1,0 +1,50 @@
+@import '~@angular/material/theming';
+@import "@styles/colors";
+
+$colmeia-accent-pallet: (
+  darker: $app-color-accent-dark,
+  default: $app-color-accent,
+  lighter: $app-color-accent-light,
+
+  contrast: (
+    darker: $app-color-accent-contrast,
+    default: $app-color-accent-contrast,
+    lighter: $app-color-accent-contrast,
+  )
+);
+
+$colmeia-primary-pallet: (
+  darker: $app-color-primary-dark,
+  default: $app-color-primary,
+  lighter: $app-color-primary-light,
+
+  contrast: (
+    darker: $app-color-primary-contrast,
+    default: $app-color-primary-contrast,
+    lighter: $app-color-primary-contrast,
+  )
+);
+
+$colmeia-warn-pallet: (
+  darker: $app-color-warn-dark,
+  default: $app-color-warn,
+  lighter:$app-color-warn-light,
+
+  contrast: (
+    darker: $app-color-warn-contrast,
+    default: $app-color-warn-contrast,
+    lighter: $app-color-warn-contrast,
+  )
+);
+
+// theme color constants
+$colmeiacred-web-primary: mat-palette($colmeia-primary-pallet, default, lighter, darker);
+$colmeiacred-web-accent: mat-palette($colmeia-accent-pallet, default, lighter, darker);
+$colmeiacred-web-warn: mat-palette($colmeia-warn-pallet, default, lighter, darker);
+
+// theme
+$colmeiacred-web-theme: mat-light-theme($colmeiacred-web-primary, $colmeiacred-web-accent, $colmeiacred-web-warn);
+
+@include mat-core();
+
+@include angular-material-theme($colmeiacred-web-theme);

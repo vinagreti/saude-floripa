@@ -1,0 +1,12 @@
+{
+  "app": {
+    "title": "deniz"
+  },
+  "label": {
+    "Dashboard": "Dashboard",
+    "Home": "Home",
+    "Login": "Login",
+    "Logout": "Logout",
+    "Page_not_found": "Page not found"
+  }
+}
